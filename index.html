@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Welcome Home, Babygirl ♡</title>
+<meta name="description" content="A cute, cozy moving-in checklist for a brand new home. Check things off, add your own, and watch your new place come together.">
+<meta name="theme-color" content="#ffeef4">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icon.svg">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#checklist">Skip to the checklist</a>
+
+<!-- ─────────────────────────  TOP BAR  ───────────────────────── -->
+<header class="topbar" id="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top" aria-label="Welcome Home — back to the top">
+      <svg class="brand-heart" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"></use></svg>
+      <span>Welcome Home</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-btn" href="#checklist">Checklist</a>
+      <button class="nav-btn" type="button" data-open-add>Add&nbsp;Item</button>
+      <button class="nav-btn" type="button" data-open-reset>Reset</button>
+    </nav>
+  </div>
+  <div class="topbar-bar" aria-hidden="true"><i id="topbarFill"></i></div>
+</header>
+
+<main id="top">
+
+  <!-- ─────────────────────────  HERO  ───────────────────────── -->
+  <section class="hero card tape" aria-labelledby="heroTitle">
+    <div class="hero-scene" aria-hidden="true">
+      <svg viewBox="0 0 340 172" role="presentation">
+        <!-- soft ground -->
+        <path d="M0 150c40-14 84-18 170-18s130 4 170 18v22H0z" fill="#ffe3ee"/>
+        <path d="M0 158c46-11 88-14 170-14s124 3 170 14v14H0z" fill="#ffd3e5" opacity=".65"/>
+
+        <!-- clouds -->
+        <g class="float-a">
+          <g fill="#f1eafc">
+            <circle cx="46" cy="34" r="13"/><circle cx="62" cy="30" r="17"/><circle cx="80" cy="35" r="12"/>
+            <rect x="44" y="34" width="38" height="13" rx="6.5"/>
+          </g>
+          <path d="M56 37q5 5 10 0" stroke="#c9b6ec" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        </g>
+        <g class="float-b">
+          <g fill="#f6eefb">
+            <circle cx="272" cy="28" r="10"/><circle cx="286" cy="24" r="13"/><circle cx="299" cy="29" r="9"/>
+            <rect x="271" y="28" width="29" height="10" rx="5"/>
+          </g>
+        </g>
+
+        <!-- little house -->
+        <g class="float-c">
+          <rect x="128" y="82" width="84" height="62" rx="9" fill="#fff" stroke="#f3a9c6" stroke-width="2.4"/>
+          <path d="M118 84 170 46l52 38" fill="none" stroke="#ee7ca8" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/>
+          <path d="M124 84 170 51l46 33z" fill="#ffd6e6"/>
+          <rect x="188" y="56" width="11" height="17" rx="3.5" fill="#ffc2da" stroke="#ee7ca8" stroke-width="2"/>
+          <!-- door -->
+          <path d="M156 144v-24a12 12 0 0 1 24 0v24z" fill="#ffd6e6" stroke="#ee7ca8" stroke-width="2.2"/>
+          <circle cx="175" cy="130" r="2.1" fill="#d9548a"/>
+          <!-- heart window -->
+          <path d="M141 100c0-3.4 2.7-5.4 5.2-5.4 1.4 0 2.6.6 3.3 1.6.7-1 1.9-1.6 3.3-1.6 2.5 0 5.2 2 5.2 5.4 0 4.4-8.5 9.4-8.5 9.4s-8.5-5-8.5-9.4Z" fill="#ffb8d4"/>
+          <!-- window right -->
+          <rect x="186" y="94" width="18" height="18" rx="5" fill="#fff4f8" stroke="#f3a9c6" stroke-width="2"/>
+          <path d="M195 94v18M186 103h18" stroke="#f3a9c6" stroke-width="1.6"/>
+        </g>
+
+        <!-- bow, left  (outer <g> positions it — the float class animates CSS
+             transform, which would otherwise override a transform attribute) -->
+        <g transform="translate(54,104)">
+          <g class="float-b">
+            <path d="M-3 3C-8-9-24-12-27-2c-2 9 15 12 24 5Z" fill="#ffc2da" stroke="#ee7ca8" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M3 3C8-9 24-12 27-2c2 9-15 12-24 5Z" fill="#ffc2da" stroke="#ee7ca8" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M-4 7c-3 8-6 12-11 16M4 7c3 8 6 12 11 16" fill="none" stroke="#ee7ca8" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="0" cy="3" r="5" fill="#ee7ca8"/>
+          </g>
+        </g>
+
+        <!-- tulips -->
+        <g stroke="#7fb896" stroke-width="2" stroke-linecap="round" fill="none">
+          <path d="M92 146v-22M100 146v-16M254 146v-20M262 146v-14"/>
+          <path d="M92 132c-6-1-9-5-9-9 5-1 8 2 9 5M100 138c5-1 8-4 8-8-5-1-7 2-8 4M254 134c-6-1-9-4-9-8 5-1 8 1 9 4"/>
+        </g>
+        <g fill="#ff9dc3">
+          <path d="M86 124c0-5 3-9 6-11 3 2 6 6 6 11 0 3-2 5-6 5s-6-2-6-5Z"/>
+          <path d="M95 130c0-4 2-7 5-9 3 2 5 5 5 9 0 3-2 4-5 4s-5-1-5-4Z" fill="#ffb8d4"/>
+          <path d="M248 126c0-5 3-8 6-10 3 2 6 5 6 10 0 3-2 4-6 4s-6-1-6-4Z"/>
+          <path d="M257 132c0-4 2-6 5-8 3 2 5 4 5 8 0 2-2 4-5 4s-5-2-5-4Z" fill="#ffb8d4"/>
+        </g>
+
+        <!-- leaves -->
+        <g fill="#bfe3d2">
+          <path d="M22 146c8-14 22-16 30-14-2 9-12 18-24 16Z"/>
+          <path d="M318 148c-8-13-20-15-28-13 2 8 11 16 22 15Z"/>
+        </g>
+
+        <!-- butterfly -->
+        <g transform="translate(252,66)">
+          <g class="float-a">
+            <g fill="#ffc2da" stroke="#ee7ca8" stroke-width="1.5">
+              <ellipse cx="-8" cy="-4" rx="8" ry="6" transform="rotate(-28 -8 -4)"/>
+              <ellipse cx="8" cy="-4" rx="8" ry="6" transform="rotate(28 8 -4)"/>
+              <ellipse cx="-6" cy="5" rx="6" ry="4.4" transform="rotate(22 -6 5)"/>
+              <ellipse cx="6" cy="5" rx="6" ry="4.4" transform="rotate(-22 6 5)"/>
+            </g>
+            <ellipse cx="0" cy="0" rx="1.7" ry="7.5" fill="#d9548a"/>
+            <path d="M0-7-4-12M0-7l4-5" fill="none" stroke="#d9548a" stroke-width="1.4" stroke-linecap="round"/>
+          </g>
+        </g>
+
+        <!-- hearts & sparkles -->
+        <g fill="#ff9dc3">
+          <path class="float-b" d="M197 34c0-3 2.4-4.8 4.6-4.8 1.2 0 2.3.5 2.9 1.4.6-.9 1.7-1.4 2.9-1.4 2.2 0 4.6 1.8 4.6 4.8 0 3.9-7.5 8.3-7.5 8.3s-7.5-4.4-7.5-8.3Z" opacity=".9"/>
+          <path class="float-c" d="M118 26c0-2.2 1.8-3.6 3.5-3.6.9 0 1.7.4 2.2 1 .5-.6 1.3-1 2.2-1 1.7 0 3.5 1.4 3.5 3.6 0 3-5.7 6.3-5.7 6.3s-5.7-3.3-5.7-6.3Z" opacity=".75"/>
+        </g>
+        <g fill="#ffd166">
+          <path class="twinkle" d="M104 62q1.6 7.4 9 9-7.4 1.6-9 9-1.6-7.4-9-9 7.4-1.6 9-9Z"/>
+          <path class="twinkle t2" d="M232 108q1.2 5.6 6.8 6.8-5.6 1.2-6.8 6.8-1.2-5.6-6.8-6.8 5.6-1.2 6.8-6.8Z"/>
+          <path class="twinkle t3" d="M62 66q1 4.6 5.6 5.6-4.6 1-5.6 5.6-1-4.6-5.6-5.6 4.6-1 5.6-5.6Z"/>
+        </g>
+        <g fill="#e3d9f5">
+          <circle class="twinkle t2" cx="300" cy="88" r="3.4"/>
+          <circle class="twinkle t3" cx="30" cy="70" r="2.8"/>
+          <circle class="twinkle" cx="212" cy="20" r="2.4"/>
+        </g>
+      </svg>
+    </div>
+
+    <p class="eyebrow">🏡 a fresh start</p>
+    <h1 class="hero-title" id="heroTitle">Welcome Home,<br><span class="name">Babygirl</span> <span class="hb">♡</span></h1>
+    <p class="hero-sub">A little checklist for your new beginning 🌸</p>
+    <p class="hero-note">
+      “New place, new memories, new little things to make it feel like home.
+      Take your time and check things off as you go. ♡”
+    </p>
+  </section>
+
+  <!-- ─────────────────────────  PROGRESS  ───────────────────────── -->
+  <section class="card progress-card" aria-labelledby="progTitle">
+    <div class="prog-top">
+      <div>
+        <h2 class="prog-title" id="progTitle">Your new home is <span id="progPct">0%</span> ready <span class="hb">♡</span></h2>
+        <p class="prog-count" id="progCount">0 / 0 things ready ♡</p>
+      </div>
+      <div class="prog-badge" id="progBadge" aria-hidden="true">🌷</div>
+    </div>
+
+    <div class="bar" role="progressbar" aria-labelledby="progTitle" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="bar">
+      <i id="barFill"></i>
+      <span class="bar-dots" aria-hidden="true"></span>
+    </div>
+
+    <p class="prog-msg" id="progMsg" aria-live="polite">Let’s begin, one little thing at a time 🌷</p>
+
+    <div class="milestones" aria-hidden="true">
+      <span data-at="25">25%</span><span data-at="50">50%</span><span data-at="75">75%</span><span data-at="100">100%</span>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────  CHECKLIST  ───────────────────────── -->
+  <section id="checklist" aria-labelledby="listTitle">
+    <div class="list-head">
+      <h2 class="section-heading" id="listTitle">The Checklist</h2>
+      <div class="filters" role="group" aria-label="Filter the checklist">
+        <button class="chip is-on" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-filter="todo" aria-pressed="false">To do</button>
+        <button class="chip" type="button" data-filter="done" aria-pressed="false">Done</button>
+      </div>
+    </div>
+
+    <div id="sections" class="sections" data-filter="all"></div>
+
+    <p class="empty-note" id="emptyNote" hidden>Nothing here right now 🌸</p>
+
+    <button class="add-inline" type="button" data-open-add>
+      <span class="plus">＋</span> Add something
+    </button>
+  </section>
+
+  <footer class="foot">
+    <svg class="foot-doodle" viewBox="0 0 220 24" aria-hidden="true">
+      <path d="M6 12q14-12 28 0t28 0q14-12 28 0t28 0q14-12 28 0t28 0q14-12 28 0" fill="none" stroke="#ffc2da" stroke-width="2.4" stroke-linecap="round"/>
+    </svg>
+    <p>Made with <span class="hb">♡</span> for your new home</p>
+    <p class="foot-sub">Everything is saved right here on your phone 🌸</p>
+  </footer>
+</main>
+
+<!-- ─────────────────────────  FLOATING ADD BUTTON  ───────────────────────── -->
+<button class="fab" type="button" data-open-add aria-label="Add something to the checklist">
+  <span class="fab-plus" aria-hidden="true">＋</span>
+  <span class="fab-txt">Add something</span>
+</button>
+
+<!-- ─────────────────────────  ADD DIALOG  ───────────────────────── -->
+<dialog class="sheet" id="addDlg" aria-labelledby="addTitle">
+  <!-- novalidate so the gentle in-page message shows instead of a browser bubble -->
+  <form method="dialog" class="sheet-in" id="addForm" novalidate>
+    <div class="sheet-deco" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><use href="#i-bow"></use></svg>
+    </div>
+    <h2 class="sheet-title" id="addTitle">What are we missing? <span class="hb">♡</span></h2>
+    <p class="sheet-sub">Pop it on the list so it doesn’t get forgotten 🌸</p>
+
+    <label class="field-label" for="addInput">Add an item…</label>
+    <input class="field" id="addInput" name="text" type="text" placeholder="Fairy lights, plant, sister’s mug…"
+           autocomplete="off" enterkeyhint="done" maxlength="80" required>
+
+    <label class="field-label" for="addSection">Where does it live?</label>
+    <div class="select-wrap">
+      <select class="field select" id="addSection" name="section"></select>
+    </div>
+
+    <p class="field-error" id="addError" role="alert" hidden>Give it a little name first 🌷</p>
+
+    <div class="sheet-acts">
+      <button class="btn btn-ghost" type="button" data-close>Cancel</button>
+      <button class="btn btn-pink" type="submit">Add <span class="hb">♡</span></button>
+    </div>
+  </form>
+</dialog>
+
+<!-- ─────────────────────────  RESET DIALOG  ───────────────────────── -->
+<dialog class="sheet" id="resetDlg" aria-labelledby="resetTitle">
+  <div class="sheet-in">
+    <div class="sheet-deco" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><use href="#i-flower"></use></svg>
+    </div>
+    <h2 class="sheet-title" id="resetTitle">Start again? <span class="hb">♡</span></h2>
+    <p class="sheet-sub">No rush — you can always undo it right after.</p>
+
+    <button class="choice" type="button" id="resetChecks">
+      <span class="choice-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-undo"></use></svg></span>
+      <span>
+        <strong>Uncheck everything</strong>
+        <small>Keeps your list exactly as it is, just clears the ticks.</small>
+      </span>
+    </button>
+
+    <button class="choice choice-warn" type="button" id="resetAll">
+      <span class="choice-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-sprout"></use></svg></span>
+      <span>
+        <strong>Start completely fresh</strong>
+        <small>Brings back the original list and removes items you added.</small>
+      </span>
+    </button>
+
+    <div class="sheet-acts">
+      <button class="btn btn-ghost btn-wide" type="button" data-close>Never mind</button>
+    </div>
+  </div>
+</dialog>
+
+<!-- ─────────────────────────  TOAST + CELEBRATION  ───────────────────────── -->
+<div class="compliments" id="compliments" aria-hidden="true"></div>
+<div class="toast-wrap" id="toastWrap" role="status" aria-live="polite"></div>
+<div class="confetti" id="confetti" aria-hidden="true"></div>
+<div class="cheer" id="cheer" hidden>
+  <div class="cheer-card">
+    <div class="cheer-emoji" aria-hidden="true">🎀</div>
+    <p class="cheer-title">Everything is ready!</p>
+    <p class="cheer-sub">Welcome home 💕</p>
+    <button class="btn btn-pink btn-wide" type="button" id="cheerClose">Yay ♡</button>
+  </div>
+</div>
+
+<noscript>
+  <p class="noscript">This little checklist needs JavaScript to remember your progress 🌸</p>
+</noscript>
+
+<!-- ─────────────────────────  ICON SPRITE  ───────────────────────── -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-heart" viewBox="0 0 24 24">
+    <path d="M12 21s-8-5-8-10.4C4 7.2 6.6 5 9.2 5c1.3 0 2.3.5 2.8 1.3.5-.8 1.5-1.3 2.8-1.3C17.4 5 20 7.2 20 10.6 20 16 12 21 12 21Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24">
+    <path d="M5 12.6 9.6 17 19 7.4" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24">
+    <path d="M4 20.2 4.7 16 15.9 4.8a2 2 0 0 1 2.8 0l.5.5a2 2 0 0 1 0 2.8L8 19.3l-4 .9Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+    <path d="M14.4 6.4 17.6 9.6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24">
+    <path d="M5 7h14M10 7V5.6A1.6 1.6 0 0 1 11.6 4h.8A1.6 1.6 0 0 1 14 5.6V7M6.6 7l.8 11.5A1.6 1.6 0 0 0 9 20h6a1.6 1.6 0 0 0 1.6-1.5L17.4 7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-undo" viewBox="0 0 24 24">
+    <path d="M4.5 9.5h6M4.5 9.5v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5.4 9.4A7.6 7.6 0 1 1 4.6 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-sprout" viewBox="0 0 24 24">
+    <path d="M12 21v-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <path d="M12 14c-1-4-4-5.4-7-5 .2 3.6 3 6 7 5ZM12 15c1-4.4 4-6 7-5.6-.2 3.8-3 6.4-7 5.6Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-close" viewBox="0 0 24 24">
+    <path d="M6.5 6.5l11 11M17.5 6.5l-11 11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24">
+    <path d="M8 10l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-bow" viewBox="0 0 24 24">
+    <path d="M11 12S4.5 5.6 2.6 9.4c-1.6 3.2 3.4 7 8.4 3.6Z" fill="currentColor" opacity=".55"/>
+    <path d="M13 12s6.5-6.4 8.4-2.6c1.6 3.2-3.4 7-8.4 3.6Z" fill="currentColor" opacity=".55"/>
+    <path d="M10.6 14 8 21M13.4 14l2.6 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="12" cy="12.4" r="2.4" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-flower" viewBox="0 0 24 24">
+    <g fill="currentColor" opacity=".6">
+      <ellipse cx="12" cy="5.8" rx="3" ry="4.2"/>
+      <ellipse cx="12" cy="5.8" rx="3" ry="4.2" transform="rotate(72 12 12)"/>
+      <ellipse cx="12" cy="5.8" rx="3" ry="4.2" transform="rotate(144 12 12)"/>
+      <ellipse cx="12" cy="5.8" rx="3" ry="4.2" transform="rotate(216 12 12)"/>
+      <ellipse cx="12" cy="5.8" rx="3" ry="4.2" transform="rotate(288 12 12)"/>
+    </g>
+    <circle cx="12" cy="12" r="2.6" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24">
+    <path d="M12 5.5v13M5.5 12h13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<script src="./app.js"></script>
+</body>
+</html>

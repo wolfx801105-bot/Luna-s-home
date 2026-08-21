@@ -1,0 +1,14 @@
+{
+  "name": "Welcome Home ♡",
+  "short_name": "Welcome Home",
+  "description": "A cute little moving-in checklist for a brand new home.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff3f8",
+  "theme_color": "#ffeef4",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
